@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="h-100">
 
 <head>
@@ -14,14 +14,15 @@
     </script>
     <link rel="stylesheet" href="css/site.css">
     <link rel="icon" type="image/png" href="img/Favicon2/favicon.ico">
+    <link href="css/prism.css" rel="stylesheet" />
 </head>
 
 <body class="d-flex flex-column h-100">
-    <!--Nav Section-->
+    <!-- ======= Nav Section ======= -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><img src="img/Favicon2/android-chrome-512x512.png" width="30"
-                    height="30" class="d-inline-block align-text-top">APP NAME</a>
+                    height="30" class="d-inline-block align-text-top">TacoCat</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,10 +33,10 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/app.html">The App</a>
+                        <a class="nav-link" href="/app.html">The App</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/code.html">The Code</a>
+                        <a class="nav-link active" aria-current="page" href="/code.html">The Code</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">The Repo</a>
@@ -47,18 +48,32 @@
             </div>
         </div>
     </nav>
-    <!--Main Section-->
+    <!-- ======= Main Section ======= -->
     <main id="content" class="flex-shrink-0">
-        <div class="container">
-            <h1>The App Page</h1>
-            <form>
-                <input id="message" type="text" placeholder="Enter A Message" required>
-                <button id="btnSubmit" type="button" class="btn btn-dark">Display Message</button>
-                <button id="btnSubmit2" type="button" class="btn btn-dark">Display Message2</button>
-            </form>
+        <div class="container col-xxl-8 px-4 py-5 mt-5">
+            <div class="row row-cols-1">
+                <div class="col col-md-6">
+                    <h1>TacoCat: A Coding Project</h1>
+                    <p>This project reverses a string using a decremented for loop. Add more TacoCat specific text</p>
+                </div>
+                <div class="col col-md-6">
+                    <h5 class="border-bottom border-danger">Enter a string to reverse</h5>
+                    <form class="row gx-3 gy-2">
+                        <div class="col-12">
+                            <input type="text" id="userString" class="form-control" required
+                                placeholder="Developer" />
+                        </div>
+                        <div class="col-12">
+                            <button type="button" id="btnSubmit" class="btn btn-danger">Reverse it!</button>
+                        </div>
+                    </form>
+                    <hr />
+                    <p id="results"></p>
+                </div>
+            </div>
         </div>
     </main>
-    <!--Footer Section-->
+    <!-- ======= Footer Section ======= -->
     <footer class="footer mt-auto py-3 sticky-footer">
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-lg-3 gy-2">
@@ -83,17 +98,17 @@
             </div>
         </div>
     </footer>
-    <!--Bootstrap JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
     </script>
-    <!--Site JS-->
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="js/site.js"></script>
     <script>
-        document.getElementById("btnSubmit").addEventListener("click", displayMessage);
-        document.getElementById("btnSubmit2").addEventListener("click", displayMessage2);
+        document.getElementById("btnSubmit").addEventListener("click", getUserString);
     </script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
