@@ -1,8 +1,18 @@
+.bgImage {
+    background-image: url("/img/27230.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
 :root {
     --primary-color: #001e43;
-    --secondary-color: #ff993b;
-    --dark-color: #292929;
-    --white-color: #dfe3e4;
+    --secondary-color: #33a125;
+    --dark-color: rgb(8, 8, 8);
+    --white-color: #ecf2f3;
 }
 
 body {
@@ -18,16 +28,16 @@ main>.container {
 }
 
 nav {
-    background-color: var(--white-color);
+    background-color: var(--dark-color);
 
 }
 
 .footer {
-    background-color: var(--white-color);
+    background-color: var(--dark-color);
 }
 
 footer .social>a {
-    color: var(--dark-color)
+    color: var(--secondary-color)
 }
 
 footer .social>a:hover {
@@ -60,4 +70,7 @@ footer .social>a:hover {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+.button {
+    color: var(--secondary-color)
 }
